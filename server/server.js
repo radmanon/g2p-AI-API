@@ -4,8 +4,8 @@ const url = require('url');
 const messages = require('./messages');
 const crypto = require('crypto');
 
-
-const connectionString = "";
+require('dotenv').config();
+const connectionString = process.env.DB_CONNECTION_STRING;
 const con = db.createConnection(connectionString);
 
 con.connect(function (err) {
